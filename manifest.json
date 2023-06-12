@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Focus Pocus",
+  "description": "Esta extensión bloqueará ciertos sitios web durante el horario laboral y te permitirá ordenar tus tareas para mantener el foco",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["blocked.html"]
+}

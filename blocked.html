@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Pocus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #2b2b2b, #1f1f1f);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-image: url("icon.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .motivational-text {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      height: 30px;
+      padding: 5px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      outline: none;
+    }
+    input[type="submit"] {
+      margin-left: 10px;
+      width: 80px;
+      height: 30px;
+      background-color: #fff;
+      color: #000;
+      font-size: 14px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8) inset;
+    }
+    input[type="submit"]:hover {
+      animation: glowing 1.5s infinite;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    li span {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    li button {
+      padding: 5px 10px;
+      background-color: #ff8500;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    li button:hover {
+      background-color: #ff6d00;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @keyframes glowing {
+      0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8); }
+      14% { box-shadow: 0 0 5px rgba(255, 115, 0, 0.8), 0 0 20px rgba(255, 115, 0, 0.8); }
+      28% { box-shadow: 0 0 5px rgba(255, 251, 0, 0.8), 0 0 20px rgba(255, 251, 0, 0.8); }
+      42% { box-shadow: 0 0 5px rgba(72, 255, 0, 0.8), 0 0 20px rgba(72, 255, 0, 0.8); }
+      57% { box-shadow: 0 0 5px rgba(0, 255, 213, 0.8), 0 0 20px rgba(0, 255, 213, 0.8); }
+      71% { box-shadow: 0 0 5px rgba(0, 43, 255, 0.8), 0 0 20px rgba(0, 43, 255, 0.8); }
+      85% { box-shadow: 0 0 5px rgba(122, 0, 255, 0.8), 0 0 20px rgba(122, 0, 255, 0.8); }
+      100% { box-shadow: 0 0 5px rgba(255, 0, 200, 0.8), 0 0 20px rgba(255, 0, 200, 0.8); }
+    }
+  </style>
+  <script src="blocked.js"></script>
+</head>
+<body>
+  <div class="logo"></div>
+
+  <h1>¡Concéntrate para alcanzar tus sueños!</h1>
+
+  <p class="instructions">Escribe una tarea y haz clic en Agregar:</p>
+
+  <form id="new-task-form">
+    <input id="new-task-input" type="text" placeholder="Añadir tarea">
+    <input type="submit" value="Agregar">
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <div class="footer">
+    Creado por Francisco Reyes P.
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Pocus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    form {
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .site-name {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    .delete-button {
+      padding: 5px 10px;
+      background-color: #ff5252;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .delete-button:hover {
+      background-color: #ff0000;
+    }
+    #toggle-block-button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #toggle-block-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <h1>Focus Pocus</h1>
+
+  <h2>Bloquear sitios web</h2>
+  <form id="blocked-sites-form">
+    <input id="site-input" type="text" placeholder="Ingrese un sitio web">
+    <button type="submit">Bloquear</button>
+  </form>
+
+  <h2>Sitios web bloqueados</h2>
+  <ul id="site-list"></ul>
+
+  <button id="toggle-block-button">Activar bloqueo</button>
+</body>
+</html>
