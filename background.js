@@ -23,7 +23,7 @@ function isBlockedURL(url) {
 }
 
 function redirectBlockedURL(details) {
-  if (isBlockedURL(details.url)) {
+  if (isBlockedURL(details.url) && blockEnabled) {
     return { redirectUrl: chrome.extension.getURL("blocked.html") };
   } else {
     return { cancel: false };
